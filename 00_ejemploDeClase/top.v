@@ -1,13 +1,13 @@
 // -----------------------------------
-// José Eduardo Morales y Kurt Kellner
+// Kurt Kellner
 // Basado en: http://www.asic-world.com/verilog/verilog_one_day1.html#Low_level_design
 // Prueba de compuertas
 // -----------------------------------
 module gates();	// generar y nombrar un módulo
   
 // dos diagonales para hacer comentar  una línea
-  
-wire out0;				// puedo ponerlos en líneas aparte
+
+wire out0;				// puedo declarar cada cable en una línea o todos en la misma línea
 wire out1;
 wire out2;
 reg in1,in2,in3,in4;	// o en la misma línea
@@ -40,7 +40,7 @@ end
  
   initial 
     begin
-      $dumpfile("top_tb.vcd");
-      $dumpvars(1);
+      $dumpfile("top_tb.vcd"); // noten que el nombre del archivo siempre es el que incluye el _tb y la extension es .vcd
+      $dumpvars(0, gates); // noten que el nombre que está después del número 0 es el mismo que el nombre del módulo que estamos probando
     end 
 endmodule	//finalizar el módulo
