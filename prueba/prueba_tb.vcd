@@ -1,5 +1,5 @@
 $date
-	Thu Jul 30 15:54:16 2020
+	Fri Jul 31 17:13:09 2020
 $end
 $version
 	Icarus Verilog
@@ -7,13 +7,13 @@ $end
 $timescale
 	1ps
 $end
-$scope module ejemplo $end
+$scope module prueba $end
 $var wire 1 ! out $end
 $var wire 1 " w1 $end
 $var wire 1 # w2 $end
-$var wire 1 $ w3 $end
-$var reg 1 % A $end
-$var reg 1 & B $end
+$var reg 1 $ A $end
+$var reg 1 % B $end
+$var reg 1 & C $end
 $upscope $end
 $enddefinitions $end
 #0
@@ -23,20 +23,31 @@ $dumpvars
 0$
 0#
 1"
-0!
+1!
 $end
 #1
-1!
-1#
 1&
 #2
+1#
+0&
+1%
+#3
+1&
+#4
 0!
 0#
 0"
 0&
-1%
-#3
-1!
+0%
 1$
+#5
+1!
 1&
-#4
+#6
+0!
+0&
+1%
+#7
+1!
+1&
+#8
