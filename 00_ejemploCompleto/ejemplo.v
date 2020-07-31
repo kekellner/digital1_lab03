@@ -5,11 +5,12 @@ module ejemplo();
   reg A, B;
   wire w1, w2, w3, out;
 
-
-  not kurt0(w1, A);
-  and kurt1(w2, w1, B);
-  and sec20(w3, A, B);
-  or  U1(out, w2, w3);
+  // not (salida, entrada);
+  // and (salida, entrada1, entrada2, entrada3, etc);
+  not U1(w1, A);
+  and U2(w2, w1, B);
+  and U3(w3, A, B);
+  or  U4(out, w2, w3);
 
   initial begin
     $display("A B | Y");
@@ -17,7 +18,8 @@ module ejemplo();
     $monitor("%b %b | %b", A, B, out);
     A = 0; B = 0;
     #1 B = 1;
-    #1 A = 1; B = 0;
+    #1 A = 1;
+    B = 0;
     #1 B = 1;
     #1 $finish;
   end
